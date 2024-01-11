@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>addResults</title>
+    <link rel="stylesheet" href="../CSSF.css">
+</head>
+<body style="background-color:#f5f7fa;" onload="checkSignedIn()">
+    <nav class="navbar">
+        <div class="navbar__container">
+          <div class="container">
+          <ul class="navbar__menu">
+            <li class="navbar__item">
+              <a href="#home" class="navbar__links" id="home-page">Home</a>
+            </li>
+            <li class="navbar__item">
+              <a href="../HTMLF.html#services" class="navbar__links" id="services-page"
+                >Our services</a
+              >
+            </li>
+            <li class="navbar__item">
+                <a href="../result.html" class="navbar__links" id="Results-page">Results</a>
+              </li>
+            <li class="navbar__btn">
+              <button href="#sign-up" class="button" id="signin" onclick="show()">Sign in</button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      
+        <form action="/add_result" method="POST" class="addResults_container">
+          <div class="add_card">
+           <h1 class="title">Add Result</h1>
+            <form action="#">
+              <div class="user__details">
+                <div class="input_box">
+                  <span class="details" > Patient ID</span>
+                  <input type="number" placeholder="Enter Patient ID" name = "p_id" required>
+                </div>
+              
+              <div class="input_box">
+                <span class="details"> Test ID</span>
+                <input type="number" placeholder="Enter Test ID" name = "test_id" required>
+              </div>
+
+              <div class="input_box">
+                <span class="details"> Report </span>
+                <textarea style="height: 200px;" type="text" id = "test_report" placeholder="report" name = "test_report" required></textarea>
+              </div>
+
+              <div class="input_box">
+                <span class="details"> Test Image</span>
+                <input  type="file" id="img" name="img" accept="image/*" required>
+              </div>
+
+            </div>
+            <div class="services__btn"><button type="submit"><a>submit</a></button></div>
+            </form> 
+        </div> 
+            </div>
+             
+      <script src="../JSF.js"></script>
+      <div class="modal_bg" id = "modal_bg" style="display: none;">
+        <div class="container" id="container" style="display: none;">
+          <div class="form-container sign-up-container">
+            <form class = "dialogue_form" action="#">
+              <h1 class="dialogue_h1">Create Account</h1>
+              <input class="dialogue_input" id = "userName" type="text" placeholder="Name" required/>
+              <input class="dialogue_input" id = "id_signup" type="text" placeholder="ID" onfocus="clear_error()" required/>
+              <input class="dialogue_input" id = "password_signup" type="password" placeholder="Password" required/>
+              <input class="dialogue_input" id = "confirm_password" type="password" placeholder="Confirm Password" required/>
+              <label class="dialogue_label" id = "error_message" style="display: none;"></label>
+              <button class="dialogue_button" onclick = "signUp()" >Sign Up</button>
+              <button class = "dialogue_button" id="close_signup" onclick="hide()">close</button>
+            </form>
+          </div>
+          <div class="form-container sign-in-container">
+            <form class="dialogue_form" action="#">
+              <h1>Sign in</h1>
+              <input class="dialogue_input" id = "id_signin" type="text" placeholder="ID" onfocus="clear_error_signIn()" required/>
+              <input class="dialogue_input" id = "password_signin" type="password" placeholder="Password" onfocus="clear_error_signIn()" required/>
+              <label class="dialogue_label" id = "error_message_signin" style="display: none;"> username or password is wrong</label>
+              <button class="dialogue_button" onclick="signIn()">Sign In</button>
+              <button class="dialogue_button" id="close_signin" onclick="hide()">close</button>
+            </form>
+          </div>
+          <div class="overlay-container">
+            <div class="overlay">
+              <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>Please login with your personal info</p>
+                <button class="ghost dialogue_button" id="signIn" onclick="signInHit()">Sign In</button>
+              </div>
+              <div class="overlay-panel overlay-right">
+                <h1>New Employee!</h1>
+                <p>Enter your personal details and start journey with us</p>
+                <button class="ghost dialogue_button" id="signUp" onclick="signUpHit()">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+</body>
+</html>
+        
+

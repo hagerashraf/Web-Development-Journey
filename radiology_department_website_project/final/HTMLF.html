@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>radiology</title>
+    
+    <link rel="stylesheet" href="CSSF.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body onload="checkSignedIn()">
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="#home" id="navbar__logo">RADIOLORY CENTER</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="#home" class="navbar__links" id="home-page">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#services" class="navbar__links" id="services-page"
+              >Our services</a
+            >
+          </li>
+          <li class="navbar__item">
+              <a href="result.html" class="navbar__links" id="about-page">Results</a>
+            </li>
+          <li class="navbar__btn">
+            <button class="button" id="signin" onclick="show()">Sign In</button>
+            <button class="button" id="userName_holder" style="display: none;"><a href = ""></a></button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+      <div class="hero__container">
+        <h1 class="hero__heading">Do your <span>TESTS</span></h1>
+        <p class="hero__description">With the best results</p>
+        <button class="main__btn" onclick="move_to_services()">book your test</button>
+      </div>
+    </div>
+
+  
+      <!-- Services Section -->
+      <div class="services" id="services">
+        <h1>Our Services</h1>
+        <div class="services__wrapper">
+          <div class="services__card">
+            <img src="https://5.imimg.com/data5/PE/OG/RJ/SELLER-2653528/digital-x-ray-machine-500x500.jpg" alt="X-Ray machine" style="width:100%;height:150%;" >
+
+            <h2>X-Ray</h2>
+            <div class="services__btn"><button><a href="Xray.html">Read more .. </a></button></div>
+          </div>
+          <div class="services__card">
+            <img src="https://cdn.ultrasoundsupply.com/wp-content/uploads/2019/06/26212346/Logiq-E9_0111.jpg" alt="Ultrasound machine" style="width:100%;height:150%;" >
+            <h2>Ultrasound</h2>
+            <div class="services__btn"><button><a href="ultrasound.html">Read more .. </a></button></div>
+          </div>
+          <div class="services__card">
+            <img src="https://pdirad.com/wp-content/uploads/2019/07/ct-scan-riverdale-nj-Imaging-Progressive-Diagnostic-Imaging-300x300.png" alt="Computed tomography machine" style="width:100%;height:150%;" >
+
+            <h2>CT scan</h2>
+            <div class="services__btn"><button><a href="ct.html">Read more .. </a></button></div>
+          </div>
+          <div class="services__card">
+            <img src="https://4.imimg.com/data4/HX/PP/NSDMERP-40225029/mrimachine-500x500.png" alt="MRI machine" style="width:100%;height:150%;" >
+            <h2>MRI</h2>
+            <div class="services__btn"><button><a href="mri.html">Read more .. </a></button></div>
+          </div>
+          <div class="services__card">
+            <img src="https://www.verywellhealth.com/thmb/1QujWWX3twP21kzF0IrRFUbR6GM=/480x336/filters:fill(87E3EF,1)/dreamstime_xs_Melissa_Connors25019964-56a1913d3df78cf7726c12f7.jpg" alt="PET machine" style="width:100%;height:150%;" >
+            <h2>PET scan</h2>
+            <div class="services__btn"><button><a href="pet.html">Read more .. </a></button></div>
+          </div>
+          <div class="services__card">
+            <img src="https://5.imimg.com/data5/ER/UI/MY-5736830/mammography-system-500x500.jpg" alt="Mammography machine" style="width:100%;height:150%;" >
+
+            <h2>Mammography</h2>
+            <div class="services__btn"><button><a href="Mammo.html">Read more .. </a> </button></div>
+          </div>
+         
+        </div>
+      </div>
+    <!-- Footer Section -->
+    <div class="footer__container">
+        <div class="footer__links">
+          <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+              <h2>About Us</h2>
+              <a href="/sign__up">How it works</a> <a href="/">Testimonials</a>
+              <a href="/">Careers</a> <a href="/">Terms of Service</a>
+            </div>
+            <div class="footer__link--items">
+              <h2>Contact Us</h2>
+              <a href="/">Contact</a> <a href="/">Support</a>
+              <a href="/">Destinations</a>
+            </div>
+          </div>
+          <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+              <h2>Social Media</h2>
+              <a href="/">Instagram</a> 
+              <a href="/">Facebook</a>
+              <a href="/">Youtube</a>
+               <a href="/">Twitter</a>
+            </div>
+          </div>
+        </div>
+        <section class="social__media">
+          <div class="social__media--wrap">
+            <div class="footer__logo">
+              <a href="/" id="footer__logo">SBME2023</a>
+            </div>
+            
+            <div class="social__icons">
+              <a href="/" class="social__icon--link" target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="/" class="social__icon--link"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="/" class="social__icon--link"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="/" class="social__icon--link"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="/" class="social__icon--link"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Sign up Section -->
+      <script src="./JSF.js"></script>
+      <div class="modal_bg" id = "modal_bg" style="display: none;">
+        <div class="container" id="container" style="display: none;">
+          <div class="form-container sign-up-container">
+            <div class = "dialogue_form">
+              <h1 class="dialogue_h1">Create Account</h1>
+              <input class="dialogue_input" id = "userName" type="text" placeholder="Name" required/>
+              <input class="dialogue_input" id = "id_signup" type="text" placeholder="ID" onfocus="clear_error()" required/>
+              <input class="dialogue_input" id = "password_signup" type="password" placeholder="Password" required/>
+              <input class="dialogue_input" id = "confirm_password" type="password" placeholder="Confirm Password" required/>
+              <label class="dialogue_label" id = "error_message" style="display: none;"></label>
+              <button class="dialogue_button" onclick = "signUp()" >Sign Up</button>
+              <button class = "dialogue_button" id="close_signup" onclick="hide()">close</button>
+            </div>
+          </div>
+          <div class="form-container sign-in-container">
+            <div class="dialogue_form">
+              <h1>Sign in</h1>
+              <input class="dialogue_input" id = "id_signin" type="text" placeholder="ID" onfocus="clear_error_signIn()" required/>
+              <input class="dialogue_input" id = "password_signin" type="password" placeholder="Password" onfocus="clear_error_signIn()" required/>
+              <label class="dialogue_label" id = "error_message_signin" style="display: none;"> username or password is wrong</label>
+              <button class="dialogue_button" onclick="signIn()">Sign In</button>
+              <button class="dialogue_button" id="close_signin" onclick="hide()">close</button>
+            </div>
+          </div>
+          <div class="overlay-container">
+            <div class="overlay">
+              <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>Please login with your personal info</p>
+                <button class="ghost dialogue_button" id="signIn" onclick="signInHit()">Sign In</button>
+              </div>
+              <div class="overlay-panel overlay-right">
+                <h1>New Employee!</h1>
+                <p>Enter your personal details and start journey with us</p>
+                <button class="ghost dialogue_button" id="signUp" onclick="signUpHit()">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script  src="./JSF.js"></script>
+      <script src="app.js"></script>
+</body>
+</html>
